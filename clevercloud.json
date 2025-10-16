@@ -2,8 +2,8 @@
   "build": {
     "type": "yarn",
     "commands": [
-      "yarn build",
-      "yarn db:generate"
+      "yarn install",
+      "yarn build"
     ]
   },
   "deploy": {

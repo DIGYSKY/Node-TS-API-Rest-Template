@@ -1,7 +1,6 @@
 {
   "name": "node-rest",
   "type": "module",
-  "packageManager": "yarn@4.9.2",
   "scripts": {
     "dev": "nodemon --exec \"tsx\" src/index.ts",
     "build": "tsc && prisma generate",
