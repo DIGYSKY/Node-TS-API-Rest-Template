@@ -1,12 +1,12 @@
 {
   "build": {
-    "type": "yarn",
+    "type": "npm",
     "commands": [
-      "yarn install",
-      "yarn build"
+      "npm install",
+      "npm run build"
     ]
   },
   "deploy": {
-    "startCommand": "yarn start"
+    "startCommand": "npm run start"
   }
 }
