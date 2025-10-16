@@ -98,7 +98,7 @@ export const register: RegisterController = async (request, reply) => {
       name: newUser.name
     });
 
-    reply.send({
+    reply.status(201).send({
       message: 'Inscription réussie',
       token,
       user: {

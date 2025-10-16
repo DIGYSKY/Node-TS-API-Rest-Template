@@ -21,3 +21,4 @@ postgres_data
 /src/generated/prisma
 .env
 dist
+token.txt

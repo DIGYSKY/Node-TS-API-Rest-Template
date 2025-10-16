@@ -54,11 +54,12 @@ export const createPost = async (request: FastifyRequest, reply: FastifyReply): 
 
 export const updatePost = async (request: FastifyRequest, reply: FastifyReply): Promise<any> => {
   try {
-    const { id, ...postData } = request.body as PostRequestBody;
+    const { id } = request.params as { id: string };
+    const postData = request.body as PostRequestBody;
 
-    if (!id) {
+    if (!id || isNaN(parseInt(id))) {
       return reply.status(400).send({
-        error: 'ID du post requis'
+        error: 'ID du post invalide'
       });
     }
 
@@ -83,11 +84,11 @@ export const updatePost = async (request: FastifyRequest, reply: FastifyReply): 
 
 export const deletePost = async (request: FastifyRequest, reply: FastifyReply): Promise<void> => {
   try {
-    const { id } = request.body as { id: string | number };
+    const { id } = request.params as { id: string };
 
-    if (!id) {
+    if (!id || isNaN(parseInt(id))) {
       reply.status(400).send({
-        error: 'ID du post requis'
+        error: 'ID du post invalide'
       });
       return;
     }
