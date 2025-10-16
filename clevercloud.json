@@ -1,0 +1,12 @@
+{
+  "build": {
+    "type": "yarn",
+    "commands": [
+      "yarn build",
+      "yarn db:generate"
+    ]
+  },
+  "deploy": {
+    "startCommand": "yarn start"
+  }
+}
