@@ -83,4 +83,5 @@ export const swaggerConfig = {
 
 export const fastifyConfig: FastifyConfig = {
   port: process.env.API_PORT ? parseInt(process.env.API_PORT) : 3001,
+  host: process.env.API_HOST ? process.env.API_HOST : '0.0.0.0',
 };
