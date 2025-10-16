@@ -1,0 +1,8 @@
+{
+  "build": {
+    "type": "yarn",
+    "commands": [
+      "yarn build"
+    ]
+  }
+}

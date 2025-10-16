@@ -4,13 +4,14 @@
   "packageManager": "yarn@4.9.2",
   "scripts": {
     "dev": "nodemon --exec \"tsx\" src/index.ts",
-    "build": "tsc",
+    "build": "tsc && prisma generate",
     "start": "node dist/index.js",
     "test": "vitest",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:studio": "prisma studio",
-    "db:seed": "tsx src/seeders/seed.js"
+    "db:seed": "tsx src/seeders/seed.js",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
